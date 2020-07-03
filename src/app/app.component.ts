@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'routing-demo';
+  title:string = 'My Home Page';
+
+  displayCards: Array<string> = ['Display Some Text', 'Another piece of text', 'Some more text','Just text'];
+
+  routeArray = [{route: '/homepage', text: 'Home'}, {route: '/contact', text: 'About'}];
 }

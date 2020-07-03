@@ -1,0 +1,17 @@
+<h2 class="heading">{{ title }}</h2>
+
+<p class="body-text">
+  {{ desc }}
+</p>
+
+<button type="button" [disabled]="isDisabled"
+  (mouseover)="buttonClick()"
+  (mouseout)="buttonClick()">Click me!</button>
+
+  <div>
+  <input type="number" [(ngModel)]="myString" />
+</div>
+
+<p class="body-text">
+  {{ myString }}
+</p>
