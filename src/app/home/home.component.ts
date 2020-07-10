@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   title:string = "Home component";
   desc:string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae consequuntur asperiores quibusdam culpa accusantium commodi consequatur aliquam qui, error perspiciatis id saepe ea amet sed doloremque magni similique itaque natus.';
@@ -19,9 +19,15 @@ export class HomeComponent implements OnInit {
     this.isDisabled = !this.isDisabled;
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() { 
+    console.log('in Home constructor');
   }
 
+  ngOnInit(): void {
+    console.log('in Home on init');
+  }
+
+  ngOnDestroy(): void {
+    console.log('in Home on destroy');
+  }
 }
