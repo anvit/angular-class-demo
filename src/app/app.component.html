@@ -6,7 +6,7 @@
 
 
 <div *ngFor="let cardElem of displayCards">
-  <card>{{ cardElem }}</card>
+  <card [cardName]="'Notification'">{{ cardElem }}</card>
 </div>
 
 <router-outlet></router-outlet>

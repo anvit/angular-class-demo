@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 
 @Component({
   selector: 'card',
@@ -6,6 +6,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit, OnDestroy {
+
+  @Input() cardName: string;
 
   isVisible: boolean = true;
   closeContainer(): void {

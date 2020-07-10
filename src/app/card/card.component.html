@@ -1,5 +1,10 @@
 <div highlight class="card-container" *ngIf="isVisible else something">
-    <ng-content></ng-content>
+    <div>
+        <p>
+            {{ cardName }}
+        </p>
+        <ng-content></ng-content>
+    </div>
     <span class="close-button" (click)="closeContainer()">x</span>
 </div>
 
