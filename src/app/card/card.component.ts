@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'card',
@@ -9,9 +9,12 @@ export class CardComponent implements OnInit, OnDestroy {
 
   @Input() cardName: string;
 
+  @Output() message = new EventEmitter<string>();
+
   isVisible: boolean = true;
   closeContainer(): void {
     this.isVisible = false;
+    this.message.emit('a card was removed');
   }
   constructor() {
     console.log('in Card constructor');

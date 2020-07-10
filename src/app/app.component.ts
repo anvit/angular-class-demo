@@ -19,4 +19,8 @@ export class AppComponent implements OnInit {
   constructor() {
     console.log('in App constructor');
   }
+
+  cardRemoved(messageFromChild: string): void {
+    console.log(messageFromChild);
+  }
 }
