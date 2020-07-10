@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { CardComponent } from './card/card.component';
 import { HighlightDirective } from './highlight.directive';
 import { InsultPipe } from './insult.pipe';
+import { PowerPipe } from './power.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InsultPipe } from './insult.pipe';
     AboutComponent,
     CardComponent,
     HighlightDirective,
-    InsultPipe
+    InsultPipe,
+    PowerPipe
   ],
   imports: [
     BrowserModule,
