@@ -14,7 +14,7 @@ export class CardComponent implements OnInit, OnDestroy {
   isVisible: boolean = true;
   closeContainer(): void {
     this.isVisible = false;
-    this.message.emit('a card was removed');
+    this.message.emit(this.cardName);
   }
   constructor() {
     console.log('in Card constructor');

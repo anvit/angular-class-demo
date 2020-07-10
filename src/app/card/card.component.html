@@ -1,13 +1,10 @@
 <div [highlight]="'rebeccapurple'" class="card-container" *ngIf="isVisible else something">
     <div>
-        <p>
-            {{ cardName }}
-        </p>
         <ng-content></ng-content>
     </div>
     <span class="close-button" (click)="closeContainer()">x</span>
 </div>
 
 <ng-template #something>
-    A card used to be here!
+    <!-- A card used to be here! -->
 </ng-template>

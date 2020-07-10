@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title:string = 'My Home Page';
 
-  displayCards: Array<string> = ['Display Some Text', 'Another piece of text', 'Some more text','Just text'];
+  displayCards: Array<string>;
 
   routeArray = [{route: '/homepage', text: 'Home'}, {route: '/contact', text: 'About'}];
 
@@ -16,11 +17,14 @@ export class AppComponent implements OnInit {
     console.log('in App on init');
   }
 
-  constructor() {
+  constructor(private dataService: DataService) {
+    // fetch the display cards from data service
+    this.displayCards = dataService.getCards();
     console.log('in App constructor');
   }
 
-  cardRemoved(messageFromChild: string): void {
-    console.log(messageFromChild);
+  cardRemoved(elementRemoved: string): void {
+    this.dataService.deleteItem(elementRemoved);
+    console.log(this.dataService.getCards());
   }
 }

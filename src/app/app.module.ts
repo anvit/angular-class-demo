@@ -11,6 +11,7 @@ import { CardComponent } from './card/card.component';
 import { HighlightDirective } from './highlight.directive';
 import { InsultPipe } from './insult.pipe';
 import { PowerPipe } from './power.pipe';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { PowerPipe } from './power.pipe';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
